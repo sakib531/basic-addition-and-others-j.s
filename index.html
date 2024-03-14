@@ -11,8 +11,30 @@
     <form action="#">
         <label for="number-one">input the first number</label>
         <input type="number" name="number-one" id="number-one"></input>
+
+        <label for="number-two">input the first number</label>
+        <input type="number" name="number-two" id="number-two"></input>
+
+        <input type="button" value="Sum" id="submit-id"></input>
+
+        <h1> result : <span id="result-id"></span></h1>
     </form>
 
 
+    <script>
+        let submitId = document.getElementById("submit-id");
+        submitId.addEventListener('click',function(){
+
+            //first data
+            let numberOneValue = parseInt(document.getElementById("number-one").value);
+
+             //second data
+             numberTwoValue = parseInt(document.getElementById("number-two").value);
+
+             resultId = document.getElementById("result-id");
+
+             resultId.innerHTML = numberOneValue + numberTwoValue;
+        })
+    </script>
 </body>
 </html>
